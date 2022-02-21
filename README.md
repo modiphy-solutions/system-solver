@@ -76,7 +76,7 @@ run test
 
 ### References for the Levenberg-Marquardt (Quasi-Newton-Steepest-Descent) algorithm
 
-* [Levenberg-Marquardt in Matlab](https://www.mathworks.com/help/optim/ug/equation-solving-algorithms.html?searchHighlight=levenberg&s_tid=srchtitle_levenberg_3)
+* [Levenberg-Marquardt in Matlab](https://www.mathworks.com/help/optim/ug/equation-solving-algorithms.html?searchHighlight=Levenberg-Marquardt&s_tid=srchtitle_Levenberg-Marquardt_3)
 
 * Implementation of [Quasi-Newton-Steepest-Descent in Iris](https://github.com/IRIS-Solutions-Team/IRIS-Toolbox/blob/bleeding/%2Bsolver/%2Balgorithm/qnsd.m)
 

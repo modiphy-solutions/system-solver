@@ -63,4 +63,3 @@ ipython
 run test
 ```
 
-2. Ru

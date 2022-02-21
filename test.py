@@ -15,14 +15,13 @@ m = Model.from_lists(
     ],
 )
 
-
 m.assign({
     'a': 1,
-    'y': 1,
-    'c': 1,
-    'i': 1,
-    'k': 1,
-    'r': 1,
+    'y': 3.275862068965518,
+    'c': 2.202734839476814,
+    'i': 1.073127229488705,
+    'k': 10.731272294887045,
+    'r': 1.052631578947368,
     'beta': 0.95,
     'gamma': 0.50,
     'delta': 0.10,
@@ -30,7 +29,9 @@ m.assign({
     'ss_a': 1,
 })
 
-
 x = m.create_steady_vector()
 f, f_string = m.steady_evaluator
+
+rhs_minus_lhs = f(x)
+print(rhs_minus_lhs)
 

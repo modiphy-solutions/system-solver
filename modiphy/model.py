@@ -131,11 +131,11 @@ class SteadyEvaluator(Evaluator):
         name = match.group(1)
         if (id := name_to_id.get(name)) is None:
             raise Exception(f"Unknown name {name} in equation {input}")
-        return f"x[{id}]"
+        return f"x[{id},0:1]"
 
     @staticmethod
     def _create_function_string(equations: list[str]) -> str:
-        return f"lambda x: array([{','.join(equations)}]).T"
+        return f"lambda x: array([{','.join(equations)}])"
 
 
 

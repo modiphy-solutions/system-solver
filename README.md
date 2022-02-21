@@ -1,5 +1,15 @@
 # Implement a quasi-Newton solver for large sparse systems in Python
 
+### Software dependencies:
+
+* [Git](www.git-scm.com)
+
+* [Python 3.10.x or higher](www.python.org)
+
+* [NumPy 1.22.x or higher](www.numpy.org)
+
+* [IPython](www.ipython.org)
+
 
 ### Setup:
 

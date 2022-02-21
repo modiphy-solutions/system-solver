@@ -66,7 +66,6 @@ run test
 
 ### References for the Levenberg-Marquardt algorithm
 
-[Levenberg-Marquardt in Matlab]
-(https://www.mathworks.com/help/optim/ug/equation-solving-algorithms.html?searchHighlight=levenberg&s_tid=srchtitle_levenberg_3)
+[Levenberg-Marquardt in Matlab](https://www.mathworks.com/help/optim/ug/equation-solving-algorithms.html?searchHighlight=levenberg&s_tid=srchtitle_levenberg_3)
 
 

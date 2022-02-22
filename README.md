@@ -8,6 +8,8 @@
 
 * [NumPy 1.22.x or higher](www.numpy.org)
 
+* [SciPy 1.8.x or higher](www.scipy.org)
+
 * [IPython](www.ipython.org)
 
 
@@ -35,10 +37,11 @@ Unix or Linux in bash | `source env/bin/activate`
 After activating the environment, Python can be called by `python` (not
 `python3` or `python3.10`)
 
-5. Install the NumPy package
+5. Install the NumPy and SciPy packages
 
 ```
 python -m pip install numpy
+python -m pip install scipy
 ```
 
 6. Install the IPython (interactive Python)

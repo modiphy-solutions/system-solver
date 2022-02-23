@@ -1,7 +1,8 @@
 
-from modiphy import Model
+import modiphy as md
+import numpy as np
 
-m = Model.from_lists(
+m = md.Model.from_lists(
     transition_variables=["a", "y", "c", "i", "k", "r"],
     parameters=["ss_a", "rho", "beta", "gamma", "delta"],
     transition_shocks=["shock_a"],
@@ -29,9 +30,13 @@ m.assign({
     'ss_a': 1,
 })
 
-x = m.create_steady_vector()
-f, f_string = m.steady_evaluator
+steady = m.steady_evaluator
 
-rhs_minus_lhs = f(x)
-print(rhs_minus_lhs)
+
+x = steady.init
+x[1] = x[1] * 1.10
+print(np.hstack((steady.init, x)))
+print() 
+
+print(np.hstack((steady.eval(), steady.eval(x))))
 

@@ -2,7 +2,7 @@
 
 ### Software dependencies:
 
-* [Git](www.git-scm.com)
+* [Git](http:\\www.git-scm.com)
 
 * [Python 3.10.x or higher](www.python.org)
 

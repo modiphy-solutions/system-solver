@@ -39,14 +39,19 @@ steady = m.steady_evaluator
 
 x = steady.init
 x[1] = x[1] * 1.10
-print(np.hstack((steady.init, x)))
 print() 
+print(np.hstack((steady.init, x)))
 
-print(np.hstack((steady.eval(), steady.eval(x))))
+print() 
+print(np.hstack( (steady.eval(), steady.eval(x)) ))
 
+print() 
 print(steady.incidence_matrix)
 
+print() 
 print(steady.quantities_solved)
+
+print() 
 print(steady.equations_solved)
 
 

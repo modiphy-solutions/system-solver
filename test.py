@@ -1,6 +1,11 @@
 
-import modiphy as md
+import importlib as il
 import numpy as np
+import sys
+sys.path.append("..")
+
+import modiphy as md
+
 
 m = md.Model.from_lists(
     transition_variables=["a", "y", "c", "i", "k", "r", "c_to_y", "i_to_y"],
@@ -34,24 +39,30 @@ m.assign({
     'ss_a': 1,
 })
 
-steady = m.steady_evaluator
+# Create object for evaluating the steady state
+steady = m.create_steady_evaluator()
 
+# Evaluate the equations at a valid steady state
+x0 = steady.init
+y0 = steady.eval(x0)
 
-x = steady.init
-x[1] = x[1] * 1.10
-print() 
-print(np.hstack((steady.init, x)))
+# Change one of the values and evaluate the equations again
+x1 = np.copy(x0)
+x1[2] = x1[2] * 1.10
+y1 = steady.eval(x1)
 
-print() 
-print(np.hstack( (steady.eval(), steady.eval(x)) ))
+print("\n[x0, x1] rounded to 4 decimals")
+print(np.hstack((x0.reshape(-1,1).round(4), x1.reshape(-1,1).round(4))))
 
-print() 
+print("\n[y0, y1] rounded to 4 decimals")
+print(np.hstack((y0.reshape(-1,1).round(4), y1.reshape(-1,1).round(4))))
+
+print("\nIncidence matrix (equations in rows, variables in columns)") 
 print(steady.incidence_matrix)
 
-print() 
+print("\nVariables") 
 print(steady.quantities_solved)
 
-print() 
+print("\nEquations") 
 print(steady.equations_solved)
-
 
